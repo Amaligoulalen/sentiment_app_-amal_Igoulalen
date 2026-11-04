@@ -32,23 +32,3 @@ py -3.11 -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python scripts/check_setup.py
-
-**Attendu** : `0 erreur(s)` au diagnostic.
-
-**Obtenu** :
-
-```text
-Résultat : 0 erreur(s), 0 avertissement(s)
-Tout est en place.             
-
----
-
-## TP6 : packager l'application
-
-### Membre B, après le TP6
-
-```powershell
-git pull
-pip install -e .
-python -m pytest -q
-sentiment --version
