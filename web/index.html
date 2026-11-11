@@ -2,13 +2,91 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Client Web Sentiment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse de Sentiment - Client Web</title>
+    <style>
+        /* Style minimaliste moderne */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+            resize: none;
+            margin-bottom: 15px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        button {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #resultat {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            min-height: 24px;
+            color: #27ae60;
+        }
+        .loading {
+            color: #f39c12 !important;
+        }
+        .error {
+            color: #e74c3c !important;
+        }
+    </style>
 </head>
 <body>
-    <h1>Client Web - Analyse de sentiment</h1>
-    <textarea id="avis" placeholder="Entrez un avis..."></textarea><br>
-    <button id="btn">Analyser</button>
-    <p id="resultat"></p>
+
+    <div class="card">
+        <h1>Analyse de sentiment</h1>
+        <textarea id="avis" placeholder="Saisissez un avis client ici..."></textarea>
+        <button id="btn">Analyser l'avis</button>
+        <p id="resultat"></p>
+    </div>
+
     <script src="client.js"></script>
 </body>
 </html>
